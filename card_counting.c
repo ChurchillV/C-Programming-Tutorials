@@ -15,6 +15,7 @@
 int main() {
    char card_name[3];
    int value = 0;
+   int count = 0;
    printf("Enter the card value: ");
    scanf("%2s", &card_name);
 // We're adding a while loop 
@@ -33,11 +34,14 @@ int main() {
          //printf("It's the big one! It's an Ace!");
       
       case 'X':
-         continue;
+         break;
       default:
       value = atoi(card_name);
       //printf("Nothing special, just a %d.", value);
-      
+      if (value > 10)
+         printf("Error! Please try again");
+         continue;
+// Outputs an error message if value is out of the range of 1-10 and jumps back to the beginning of the loop to try again
       }
       }
 
@@ -47,12 +51,13 @@ int main() {
       scanf("%s", card_name);*/
 
    if ((value >= 3) && (value <= 6)) {
-      puts("Our count has gone up!");
+      count++;
    }
 
    else if (value >= 10) {
-      puts("The count has gone down.");
+      count --;
    }
+   printf("The count is now %d", count);
 
 
    return 0;
