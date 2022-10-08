@@ -36,11 +36,14 @@ int main() {
       case 'X':
          break;
       default:
-      value = atoi(card_name);
+         value = atoi(card_name);
+         if ((value < 1) || (value > 10) ) {
+            puts("Error! Please try again.");
+            continue;
+   
       //printf("Nothing special, just a %d.", value);
-      if (value > 10)
-         printf("Error! Please try again");
-         continue;
+   
+   }
 // Outputs an error message if value is out of the range of 1-10 and jumps back to the beginning of the loop to try again
       }
       }
@@ -53,10 +56,8 @@ int main() {
    if ((value >= 3) && (value <= 6)) {
       count++;
    }
-
-   else if (value >= 10) {
+   if (value >= 10)
       count --;
-   }
    printf("The count is now %d", count);
 
 
