@@ -18,7 +18,8 @@ int main() {
    Enqueue(23);
    Enqueue(28);
    Enqueue(18);
-   Dequeue();
+   Enqueue(30);
+   //Dequeue();
 
    for (int integer = 0; integer < count; integer++) {
       printf("%d ", queue[integer]);
