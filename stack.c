@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <limits.h>
 #include <string.h>
+//Implementing stacks in C programming
 
 //Functions and Global variable declarations
 int stack[10];
