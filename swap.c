@@ -5,6 +5,7 @@
 int main() {
    int length,i,j;
    char str[50], temp;
+   printf("Enter the string to be reversed:\n");
    gets(str);
    length = strlen(str);
    i = 0;
